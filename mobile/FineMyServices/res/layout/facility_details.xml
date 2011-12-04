@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Youth Comminity Center \n15 Christopher Rd, Suit 103\n1.7 Km Away (20 minute walk)"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/filler"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/accessible" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/warning" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/stop" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/filler2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/btnShowAddres"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:text="Take Me There >>" 
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/filler3"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp" />
+
+    <Button
+        android:id="@+id/btnShowAddres"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:text="Report" 
+        android:textSize="30dp" />
+
+</LinearLayout>
