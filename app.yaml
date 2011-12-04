@@ -1,0 +1,16 @@
+application: accessprto
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /name*
+  script: name.py
+
+- url: /nearby*
+  script: nearby.py
+
+- url: /.*
+  script: default.py
+
+

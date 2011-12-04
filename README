@@ -1,0 +1,22 @@
+This is an interface to receive http GET requests from a mobile device
+and return the results as a formatted list.
+
+We have our data available in a fusion table:
+	https://www.google.com/fusiontables/DataSource?dsrcid=2338762
+
+We have an earlier version of the code contained here running on appengine:
+   http://accessprto.appspot.com
+
+It responds to two types of queries:
+   Find two closest services to a given lat/long pair:
+   http://accessprto.appspot.com/nearby?service=pool&latitude=43000000&longitude=-7900000 
+
+   Return a service info given its id:
+   http://accessprto.appspot.com/nearby?name=1022
+
+The results are not properly formatted as the mobile/db interface is not yet implemented.
+
+
+The update_fusion.py adds to each entry a lat/lng coordinate by using the google maps api.
+I tried it on a couple of samples, we will be updating the entire table offline.
+
