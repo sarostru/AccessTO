@@ -8,8 +8,9 @@ class DataBase:
 		self.tableid = tableid
 	
 	def idRequest(self,id):
-		query = "select LOCATION_TYPE,ADDRESS,PHONE,ACCESSIBILITY_SHORT from "\
-				+str(self.tableid)+" where ID="+str(id)
+		#query = "select LOCATION_TYPE,ADDRESS,PHONE,ACCESSIBILITY_SHORT from "\
+		query = "select Facility Name, Address, Accessibility from "\
+			+str(self.tableid)+" where ID="+str(id)
 		header_data = self.client.runGetQuery(query)
 		data = header_data.partition('\n')[2]
 		return data
@@ -19,7 +20,8 @@ class DataBase:
 		lat = float(latitude)/1000000.0
 		lng = float(longitude)/1000000.0
 		#query = "select ADDRESS from "\
-		query = "select LOCATION_TYPE,ADDRESS,PHONE,ACCESSIBILITY_SHORT,LATITUDE,LONGITUDE from "\
+		#query = "select LOCATION_TYPE,ADDRESS,PHONE,ACCESSIBILITY_SHORT,LATITUDE,LONGITUDE from "\
+		query = "select Facility Name, Address, Accessibility, Latitude, Longitude from "\
 				+str(self.tableid)+" "\
 				+"order by ST_DISTANCE(ADDRESS, LATLNG("\
 				+str(lat)+", "+str(lng)+"))"\
